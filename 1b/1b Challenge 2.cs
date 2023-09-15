@@ -4,12 +4,14 @@ public class ExamGrader
 {
 	public void Main()
 	{
+		//Enter score and subject
 		Console.WriteLine("Enter Exam Score: (Out of 100)");
 		int examScore = Convert.ToInt32(Console.ReadLine());
 		
 		Console.WriteLine("Enter Subject:");
 		string subject = (Console.ReadLine());
 		
+		//Exam scores outputs
 		if (examScore >= 90) {
 			Console.WriteLine("Your Grade: A");
 		} else if (examScore >=80) {
@@ -21,6 +23,7 @@ public class ExamGrader
 		} else {
 			Console.WriteLine("Your Grade: F");
 		}
+		   //Adding in a messege based on subject using a switch
 		   switch (subject.ToLower()) // Convert to lowercase to handle case-insensitivity
         {
             case "math":
