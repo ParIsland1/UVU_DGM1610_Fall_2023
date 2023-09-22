@@ -4,6 +4,7 @@ public class Program
 {
 	public static void Main()
 	{
+		// Declaring all the variables and generating the #
 		Random random = new Random();
 		bool playAgain = true;
 		int min = 1;
@@ -12,7 +13,7 @@ public class Program
 		int number;
 		int guesses;
 		string response;
-		
+		// For while the game is running
 		while(playAgain == true)
 		{
 			guess = 0;
@@ -24,7 +25,7 @@ public class Program
 			{
 				Console.WriteLine("Guess a number bewtween " + min + "-" + max + "! ");
 				guess = Convert.ToInt32(Console.ReadLine());
-				
+				// Give hint, high or low
 				if(guess > number)
 				{
 					Console.WriteLine("Too high! Try again.");	
@@ -37,7 +38,7 @@ public class Program
 			}
 			Console.WriteLine("Correct!" + number);
 			Console.WriteLine("Attempts: " + guesses);
-			
+			//Restart the game if yes
 			Console.WriteLine("Play again? (Yes or No)");
 			response = Console.ReadLine();
 			response = response.ToUpper();
